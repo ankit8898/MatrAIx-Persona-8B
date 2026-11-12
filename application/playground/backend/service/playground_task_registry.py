@@ -172,6 +172,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
     "survey_robinhood-cortex-digests": PlaygroundTaskEntry(application_type="survey"),
     "survey_cvs-prescription-ai": PlaygroundTaskEntry(application_type="survey"),
     "survey_nike-air-max-dn": PlaygroundTaskEntry(application_type="survey"),
+    "movie-taste-survey": PlaygroundTaskEntry(application_type="survey"),
 }
 
 

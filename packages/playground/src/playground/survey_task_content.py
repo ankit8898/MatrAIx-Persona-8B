@@ -31,6 +31,7 @@ SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID: dict[str, str] = {
     "finance_robinhood_cortex_digests_v1": "survey_robinhood-cortex-digests",
     "healthcare_cvs_app_prescription_ai_v1": "survey_cvs-prescription-ai",
     "commerce_nike_air_max_dn_dynamic_air_v1": "survey_nike-air-max-dn",
+    "movie_taste_v1": "movie-taste-survey",
 }
 
 _TASK_FOLDER_BY_QUESTIONNAIRE_ID = SURVEY_TASK_FOLDER_BY_QUESTIONNAIRE_ID

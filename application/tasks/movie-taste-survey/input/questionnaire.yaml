@@ -1,0 +1,122 @@
+schemaVersion: "1.0"
+id: movie_taste_v1
+title: Movie Taste Survey
+description: Film-taste survey designed to distinguish drama lovers, drama haters, and comedy lovers.
+questions:
+  - id: q_prefer_cry
+    prompt: "On a 1–5 scale, where 1 is strongly disagree and 5 is strongly agree: I prefer movies that make me cry."
+    type: likert
+    construct: prefer_emotional_drama
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_go_to_laugh
+    prompt: "On a 1–5 scale, where 1 is strongly disagree and 5 is strongly agree: I go to the movies to laugh."
+    type: likert
+    construct: comedy_motivation
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_sit_through_3h
+    prompt: "On a 1–5 scale, where 1 is very unlikely and 5 is very likely: How likely are you to sit through a 3-hour character drama this weekend?"
+    type: likert
+    construct: long_drama_tolerance
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_arthouse_pretentious
+    prompt: "On a 1–5 scale, where 1 is strongly disagree and 5 is strongly agree: Heavy art-house dramas usually feel slow, pretentious, or depressing to me."
+    type: likert
+    construct: art_house_aversion
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_romcom_vs_drama
+    prompt: "On a 1–5 scale, where 1 is strongly disagree and 5 is strongly agree: A well-made rom-com is a better night for me than a critically acclaimed drama."
+    type: likert
+    construct: romcom_over_prestige
+    required: true
+    minValue: 1
+    maxValue: 5
+  - id: q_manchester
+    prompt: "Someone suggests watching Manchester by the Sea tonight (a heavy, grief-centered character drama). What is your honest reaction?"
+    type: single_choice
+    construct: manchester_reaction
+    required: true
+    options:
+      - id: lean_in
+        label: I would be glad to watch it. Heavy emotional stories like this are what I look for.
+      - id: maybe_if_mood
+        label: I might watch it if I were in the right mood, but it is not my default pick.
+      - id: rather_not
+        label: I would rather not. It sounds too slow, heavy, or depressing for tonight.
+      - id: hard_no
+        label: Hard no. I actively avoid movies like this.
+  - id: q_comedy_night
+    prompt: "Someone puts on Bridesmaids or Superbad tonight. What is your honest reaction?"
+    type: single_choice
+    construct: comedy_night_reaction
+    required: true
+    options:
+      - id: excited
+        label: Excited. A funny, lighter movie is exactly what I want.
+      - id: fine
+        label: Fine with me. I enjoy comedies even if they are not always my first choice.
+      - id: lukewarm
+        label: Lukewarm. I would go along, but I would rather watch something more serious.
+      - id: skip
+        label: I would try to skip it and suggest a drama or prestige film instead.
+  - id: q_shawshank
+    prompt: "The Shawshank Redemption is often called a great drama. Your honest take?"
+    type: single_choice
+    construct: shawshank_stance
+    required: true
+    askRationale: true
+    options:
+      - id: masterpiece
+        label: It is the kind of character-driven drama I love, and I would gladly rewatch it.
+      - id: respect_not_favorite
+        label: I respect it, but a heavy prison drama is not usually what I choose.
+      - id: overrated
+        label: It is overrated or too serious for me. I would rather watch something funnier.
+      - id: unseen_not_drawn
+        label: I have not seen it and do not feel drawn to it.
+  - id: q_eeaao
+    prompt: "Everything Everywhere All at Once is funny, chaotic, and also emotional. Which is closest to how you would watch it?"
+    type: single_choice
+    construct: eeaao_angle
+    required: true
+    options:
+      - id: emotion_first
+        label: I would be there mainly for the family drama and emotional weight.
+      - id: both
+        label: I like that it mixes laughs with feeling; I would enjoy both sides.
+      - id: laughs_first
+        label: I would be there mainly for the humor and wild set pieces, and I might check out of the heavier parts.
+      - id: not_for_me
+        label: This is not for me, either because it is too strange or too emotional.
+  - id: q_saturday_picks
+    prompt: "Which of these would you actually pick for a Saturday night? Choose all that apply."
+    type: multi_choice
+    construct: saturday_picks
+    required: true
+    options:
+      - id: shawshank
+        label: The Shawshank Redemption
+      - id: manchester
+        label: Manchester by the Sea
+      - id: bridesmaids
+        label: Bridesmaids
+      - id: superbad
+        label: Superbad
+      - id: eeaao
+        label: Everything Everywhere All at Once
+      - id: art_house
+        label: A heavy art-house drama
+      - id: romcom
+        label: A rom-com
+  - id: q_watch_tonight
+    prompt: "What would you watch tonight, and why? Name a film or a type of film (for example a rom-com, a prestige drama, or one of the titles in the brief)."
+    type: free_text
+    construct: tonight_choice
+    required: true

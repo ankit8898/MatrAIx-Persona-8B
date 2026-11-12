@@ -1,0 +1,50 @@
+{
+  "kind": "movie-evaluator",
+  "count": 3,
+  "schema_version": "1.0",
+  "dimension_categories": "persona/schema/dimensions.json",
+  "personas": [
+    {
+      "persona_id": "drama-lover",
+      "path": "persona/datasets/movie-evaluator/persona_drama-lover.yaml",
+      "source": "synthetic",
+      "display_name": "Maya Ellison",
+      "dimensions": {
+        "filmg_drama": "Love",
+        "filmg_comedy": "Neutral",
+        "filmg_art_house": "Love",
+        "filmg_romance": "Like",
+        "topic_film": "Passionate",
+        "age_bracket": "35-44"
+      }
+    },
+    {
+      "persona_id": "drama-hater",
+      "path": "persona/datasets/movie-evaluator/persona_drama-hater.yaml",
+      "source": "synthetic",
+      "display_name": "Derek Walsh",
+      "dimensions": {
+        "filmg_drama": "Dislike",
+        "filmg_comedy": "Love",
+        "filmg_art_house": "Dislike",
+        "filmg_romance": "Like",
+        "topic_film": "Interested",
+        "age_bracket": "25-34"
+      }
+    },
+    {
+      "persona_id": "comedy-lover",
+      "path": "persona/datasets/movie-evaluator/persona_comedy-lover.yaml",
+      "source": "synthetic",
+      "display_name": "Priya Raman",
+      "dimensions": {
+        "filmg_drama": "Neutral",
+        "filmg_comedy": "Love",
+        "filmg_art_house": "Neutral",
+        "filmg_romance": "Love",
+        "topic_film": "Passionate",
+        "age_bracket": "25-34"
+      }
+    }
+  ]
+}
